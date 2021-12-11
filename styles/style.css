@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  font-weight: thin;
+  src: url("../assets/fonts/SF-Pro-Display-Thin.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  font-weight: medium;
+  src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  font-weight: regular;
+  src: url("../assets/fonts/SF-Pro-Display-Regular.otf");
+}
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  font-weight: bold;
+  src: url("../assets/fonts/SF-Pro-Display-Semibold.otf");
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+/* Variables */
+:root {
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eff3fa;
+  color: #444444;
+  font-family: 'SF-Pro-Display', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header {
+  background: #fff;
+  padding: 1rem 8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Logo */
+header .logo img {
+    width: 200px;
+    height: auto;
+}
+
+/*--------------------------------------------------------------
+# Main Content
+--------------------------------------------------------------*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 200vh;
+}
+
+.main-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1.5rem 2rem;
+    width: 60vw;
+    margin-left: 3rem;
+}
+
+.main-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+}
+
+/* Colours wrapper */
+.colours-wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+/* Color item */
+.colours-wrapper div {
+    color: #fff;
+    border-radius: 5px;
+    padding: .75rem .75rem;
+    margin-right: 1rem;
+}
+
+.colours-wrapper div:nth-child(1) {
+    background-color: #1E64E7;
+}
+
+.colours-wrapper div:nth-child(2) {
+    background-color: #EFF3FA;
+    color: #444444;
+}
+
+.colours-wrapper div:nth-child(3) {
+    background-color: #444444;
+}
+
+.colours-wrapper div:nth-child(4) {
+    color: #444444;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+.sidebar {
+    margin: 0 8rem;
+    background-color: #fff;
+    width: 70%;
+    padding: 1rem 1rem;
+    position: sticky;
+    top: 0;
+}
