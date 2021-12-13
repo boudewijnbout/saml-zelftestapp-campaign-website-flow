@@ -8,10 +8,6 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css">
-
-
-    <!-- Fonts -->
-
 </head>
 <body>
     
@@ -24,22 +20,103 @@
         </div>
     </header>
 
+    <!-- Main -->
     <main>
         
         <!-- Sidebar -->
         <section class="sidebar">
-            Sidebar
+            <div class="sticky-sidebar">
+                <h4>Navigate</h4>
+
+                <hr>
+
+                <ul>
+                    <li>
+                        <a href="#colours">> Colours</a>
+                    </li>
+                    <li>
+                        <a href="#typography">> Typography</a>
+                    </li>
+                    <li>
+                        <a href="#buttons">> Buttons</a>
+                    </li>
+                    <li>
+                        <a href="#layouts">> Layouts</a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section class="main-content">
+        <!-- Main Content -->
+        <section class="main-content" id="colours">
             <h1>Colour Palette</h1>
             <p>Below you can find the primary and secondary colours used for the Self Test website.</p>
 
+            <!-- Colours Wrapper -->
             <section class="colours-wrapper">
                 <div>#1E64E7</div>
                 <div>#EFF3FA</div>
                 <div>#444444</div>
                 <div>#FFFFFF</div>
+            </section>
+
+            <hr>
+
+            <!-- Typography Wrapper -->
+            <section class="typography-wrapper" id="typography">
+                <h2>Typography</h2>
+
+                <!-- Heading 1 -->
+                <h1>Heading 1</h1>
+                <p>SF-Pro-Display /  Bold / Font size 3.75rem / Line height 70px</p>
+
+                <!-- Heading 2 -->
+                <h2>Heading 2</h2>
+                <p>SF-Pro-Display / Bold / Font size 2rem / Line height 38px</p>
+
+                <!-- Heading 3 -->
+                <h3>Heading 3</h3>
+                <p>SF-Pro-Display / Bold / Font size 1.5rem / Line height 25px</p>
+
+                <!-- Heading 4 -->
+                <h4>Heading 4</h4>
+                <p>SF-Pro-Display / Bold / Font size 1.25rem / Line height 25px</p>
+
+                <!-- Paragraphs -->
+                <h4>Paragraphs</h4>
+                <p>SF-Pro-Display / Regular / Font size 1.25rem / Line height 25px</p>
+            </section>
+
+            <hr>
+
+            <!-- Button wrapper -->
+            <section class="button-wrapper" id="buttons">
+                <h2>Buttons</h2>
+
+                <!-- Button primary -->
+                <button class="btn btn-primary">Primary Button</button>
+
+                <!-- Button secondary -->
+                <button class="btn btn-secondary">Secondary Button</button>  
+            </section>
+
+            <hr>
+
+            <!-- Layouts -->
+            <!-- <section class="layout-wrapper" id="layouts">
+                <h2>Layout / Grid options</h2>
+
+                <section class="layout-grid">
+                    <div>
+                        <h4>Full Width</h4>
+                    </div>
+                    <div>
+                        <h4>50%</h4>
+                    </div>
+                    <div>
+                        <h4>50%</h4>
+                    </div>
+                </section> -->
             </section>
         </section>
     </main>

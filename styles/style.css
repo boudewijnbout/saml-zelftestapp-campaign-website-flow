@@ -40,10 +40,38 @@
   padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   background-color: #eff3fa;
   color: #444444;
   font-family: 'SF-Pro-Display', sans-serif;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #EFF3FA;
+    margin-top: 1rem;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
 }
 
 /*--------------------------------------------------------------
@@ -54,6 +82,18 @@ header {
   background: #fff;
   padding: 1rem 8rem;
   margin-bottom: 1.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 /* Logo */
@@ -69,7 +109,7 @@ header .logo img {
 main {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    height: 200vh;
+    margin-top: 6rem; 
 }
 
 .main-content {
@@ -81,11 +121,14 @@ main {
 }
 
 .main-content h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-bottom: .5rem;
 }
 
-/* Colours wrapper */
+/*--------------------------------------------------------------
+# Colours Wrapper
+--------------------------------------------------------------*/
+
 .colours-wrapper {
     display: flex;
     margin-top: 1rem;
@@ -117,14 +160,130 @@ main {
 }
 
 /*--------------------------------------------------------------
+# Typography Wrapper
+--------------------------------------------------------------*/
+
+.typography-wrapper {
+    margin-top: 1.5rem;
+}
+
+/* Heading levels */
+.typography-wrapper h1 {
+    font-size: 3.75rem;
+    margin-top: 1.25rem;
+}
+
+.typography-wrapper h2 {
+    font-size: 2rem;
+    margin-top: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.typography-wrapper h3 {
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.typography-wrapper h4 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+/*--------------------------------------------------------------
+# Button Wrapper
+--------------------------------------------------------------*/
+
+.button-wrapper {
+    margin-top: 1.5rem;
+}
+
+/* Button */
+.btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+/* Button primary */
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #1e64e7;
+}
+
+/* Button secondary */
+.btn-secondary {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    background-color: #EFF3FA;
+    color: #444444;
+    margin-left: .5rem;
+}
+
+/*--------------------------------------------------------------
+# Layout Wrapper
+--------------------------------------------------------------*/
+
+.layout-wrapper {
+    margin-top: 1.5rem;
+}
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 1rem;
+}
+
+.layout-wrapper div {
+    background-color: #EFF3FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout-wrapper div:nth-child(1) {
+    padding: 3rem 2rem;
+    grid-column: 1 / 5;
+}
+
+
+/*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
 
 .sidebar {
     margin: 0 8rem;
-    background-color: #fff;
     width: 70%;
-    padding: 1rem 1rem;
+}
+
+.sticky-sidebar {
+    background-color: #fff;
+    padding: 1rem 1.25rem;
     position: sticky;
-    top: 0;
+    top: 5.5rem;
+}
+
+.sidebar h4 {
+    font-size: 1.25rem;
+}
+
+/* Sidebar seperator */
+.sidebar hr {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar links */
+.sidebar ul li {
+    margin-bottom: .75rem;
+}
+
+.sidebar ul li a {
+    transition: all 200ms;
+}
+
+.sidebar ul li a:hover {
+    color:#1e64e7;
 }
