@@ -254,23 +254,22 @@ header {
 --------------------------------------------------------------*/
 
 .privacy-usage {
-  margin-top: 35px;
+  margin-top: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.privacy-usage {
-  padding-left: 0;
+  grid-template-columns: 1fr;
 }
 
 .privacy-usage div:nth-child(1) {
   background: #fff;
-  padding: 1rem 4rem;
-  margin-right: 50px;
+  margin-right: 25px;
+  grid-row: 2;
+  padding: 1rem 1.2rem;
+  width: 100%;
 }
 
 .privacy-usage h3 {
   margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .privacy-usage p {
@@ -282,6 +281,94 @@ header {
 .privacy-usage-image img {
   width: 100%;
   height: auto;
+  grid-row: 1;
+}
+
+.privacy-usage a {
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+
+.features {
+  margin-top: 50px;
+}
+
+.features h3 {
+  margin-bottom: 15px;
+}
+
+/* Features cards */
+.features-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+  grid-gap: 15px;
+}
+
+/* Specific features card */
+.features-card {
+  background: #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.features-card img {
+  width: 45px;
+  height: auto;
+}
+
+.features-card h4 {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.features-card p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer {
+  background: #fff;
+  margin-top: 50px;
+  display: grid;
+  padding: 1rem 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Footer logo */
+footer img {
+  width: 175px;
+  height: auto;
+  margin-bottom: 30px;
+  grid-row: 1;
+}
+
+footer div {
+  grid-row: 2;
+}
+
+/* Footer nav menu */
+footer h4 {
+  color: var(--main-text-color);
+  margin-bottom: 5px;
+}
+
+footer .seperator {
+  width: 40px;
+  height: 2px;
+  margin-bottom: 12px;
+}
+
+footer ul li {
+  margin-bottom: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -291,6 +378,10 @@ header {
 @media (min-width: 30rem) {
   section {
     padding: 0 2rem;
+  }
+
+  .privacy-usage {
+    margin-top: 35px;
   }
 }
 
@@ -302,6 +393,41 @@ header {
 
   .nav-menu-desktop {
     display: flex;
+  }
+
+  /* Privacy Usage */
+  .privacy-usage {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+    grid-gap: 25px;
+  }
+
+  .privacy-usage div:nth-child(1) {
+    grid-row: 1;
+    padding: 1rem 4rem;
+  }
+
+  /* Features */
+  .features {
+    margin-top: 75px;
+  }
+
+  .features-card-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* Footer */
+  footer {
+    grid-template-columns: .2fr .15fr .2fr;
+    grid-gap: 35px;
+  }
+
+  footer img {
+    grid-row: 1;
+  }
+
+  footer div {
+    grid-row: 1;
   }
 }
 
@@ -340,9 +466,16 @@ header {
 
   .how-does-it-work ol {
     grid-column: 2 / 5;
-    display: grid;
+    display: grid;  
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     margin-left: 4rem;
+  }
+  
+  /* Privacy usage */
+  .privacy-usage {
+    grid-template-columns: 1fr 1.5fr;
+    padding-left: 0;
+    grid-gap: 50px;
   }
 }
