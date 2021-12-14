@@ -32,6 +32,11 @@
 
 /* Variables */
 :root {
+  --main-color: #1e64e7;
+  --main-bg-color: #1e64e7;
+  --main-text-color: #444444;
+  --secondary-bg: #eff3fa;
+  --bg-white: #fff;
 }
 
 * {
@@ -41,37 +46,63 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #eff3fa;
-  color: #444444;
-  font-family: 'SF-Pro-Display', sans-serif;
+  color: var(--main-text-color);
+  font-family: "SF-Pro-Display", sans-serif;
 }
 
 hr {
-    border: none;
-    height: 1px;
-    background: #EFF3FA;
-    margin-top: 1rem;
+  border: none;
+  height: 1px;
+  background: var(--secondary-bg);
+  margin-top: 1rem;
 }
 
 button {
-    outline: none;
-    border: none;
-    cursor: pointer;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: #444444;
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+section {
+  padding: 0 1rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: all 200ms;
+}
+
+.btn img {
+  position: relative;
+  top: 2px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.seperator {
+  background: var(--main-bg-color);
+  width: 100px;
+  height: 3px;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -79,211 +110,239 @@ a {
 --------------------------------------------------------------*/
 
 header {
-  background: #fff;
-  padding: 1rem 8rem;
-  margin-bottom: 1.5rem;
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  top: 0;
-  display: flex;
+  background: var(--bg-white);
   height: 70px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+/* Logo Wrapper */
+.logo-wrapper img {
+  width: 200px;
+  height: auto;
 }
 
-/* Logo */
-header .logo img {
-    width: 200px;
-    height: auto;
+/* Nav Menu Desktop */
+.nav-menu-desktop {
+  display: none;
+  margin-left: auto;
 }
 
-/*--------------------------------------------------------------
-# Main Content
---------------------------------------------------------------*/
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    margin-top: 6rem; 
+.nav-menu-desktop ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.main-content {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 1.5rem 2rem;
-    width: 60vw;
-    margin-left: 3rem;
-}
-
-.main-content h1 {
-    font-size: 2rem;
-    margin-bottom: .5rem;
+.nav-menu-desktop ul li {
+  margin-right: 20px;
 }
 
 /*--------------------------------------------------------------
-# Colours Wrapper
+# Banner
 --------------------------------------------------------------*/
 
-.colours-wrapper {
-    display: flex;
-    margin-top: 1rem;
+.banner {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)),
+    url("/assets/images/banner-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin-top: 70px;
 }
 
-/* Color item */
-.colours-wrapper div {
-    color: #fff;
-    border-radius: 5px;
-    padding: .75rem .75rem;
-    margin-right: 1rem;
+/* Banner Content */
+.banner-content {
+  padding: 2rem 0;
 }
 
-.colours-wrapper div:nth-child(1) {
-    background-color: #1E64E7;
+.banner h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-.colours-wrapper div:nth-child(2) {
-    background-color: #EFF3FA;
-    color: #444444;
-}
-
-.colours-wrapper div:nth-child(3) {
-    background-color: #444444;
-}
-
-.colours-wrapper div:nth-child(4) {
-    color: #444444;
-}
-
-/*--------------------------------------------------------------
-# Typography Wrapper
---------------------------------------------------------------*/
-
-.typography-wrapper {
-    margin-top: 1.5rem;
-}
-
-/* Heading levels */
-.typography-wrapper h1 {
-    font-size: 3.75rem;
-    margin-top: 1.25rem;
-}
-
-.typography-wrapper h2 {
-    font-size: 2rem;
-    margin-top: 1.25rem;
-    margin-bottom: .5rem;
-}
-
-.typography-wrapper h3 {
-    font-size: 1.5rem;
-    margin-top: 1.25rem;
-    margin-bottom: .5rem;
-}
-
-.typography-wrapper h4 {
-    font-size: 1.25rem;
-    margin-top: 1.25rem;
-    margin-bottom: .5rem;
-}
-
-/*--------------------------------------------------------------
-# Button Wrapper
---------------------------------------------------------------*/
-
-.button-wrapper {
-    margin-top: 1.5rem;
-}
-
-/* Button */
-.btn {
-    margin-top: 1rem;
-    font-size: 1rem;
+/* Banner buttons */
+.banner-btn-wrapper {
+  margin-top: 10px;
+  display: flex;
 }
 
 /* Button primary */
 .btn-primary {
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.25rem;
-    color: #fff;
-    background-color: #1e64e7;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: var(--main-bg-color);
 }
 
 /* Button secondary */
 .btn-secondary {
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.25rem;
-    background-color: #EFF3FA;
-    color: #444444;
-    margin-left: .5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--secondary-bg);
+  color: var(--main-text-color);
+  margin-right: 10px;
 }
 
 /*--------------------------------------------------------------
-# Layout Wrapper
+# How does it work?
 --------------------------------------------------------------*/
 
-.layout-wrapper {
-    margin-top: 1.5rem;
+.how-does-it-work {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.layout-grid {
+.how-does-it-work h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.how-does-it-work p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.how-does-it-work ol {
+  margin-top: 20px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+}
+
+/* How does it work card item */
+.how-does-it-work ol li {
+  background-color: #fff;
+  padding: 1rem 1.2rem;
+  text-align: center;
+}
+
+.how-does-it-work-card img {
+  width: 34px;
+  height: auto;
+}
+
+.how-does-it-work-card h3 {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.how-does-it-work-card h4 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.how-does-it-work-card p {
+  font-size: .9rem;
+  margin-top: 10px;
+  text-align: start;
+}
+
+/*--------------------------------------------------------------
+# Privacy Usage Section
+--------------------------------------------------------------*/
+
+.privacy-usage {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.privacy-usage {
+  padding-left: 0;
+}
+
+.privacy-usage div:nth-child(1) {
+  background: #fff;
+  padding: 1rem 4rem;
+  margin-right: 50px;
+}
+
+.privacy-usage h3 {
+  margin-bottom: 15px;
+}
+
+.privacy-usage p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Privacy usage image */
+.privacy-usage-image img {
+  width: 100%;
+  height: auto;
+}
+
+/*--------------------------------------------------------------
+# Media Query's
+--------------------------------------------------------------*/
+
+@media (min-width: 30rem) {
+  section {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .how-does-it-work ol {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 1rem;
-}
+    grid-template-columns: 1fr 1fr;
+  }
 
-.layout-wrapper div {
-    background-color: #EFF3FA;
+  .nav-menu-desktop {
     display: flex;
-    justify-content: center;
-    align-items: center;
+  }
 }
 
-.layout-wrapper div:nth-child(1) {
-    padding: 3rem 2rem;
-    grid-column: 1 / 5;
-}
+@media (min-width: 62.5rem) {
+  header {
+    padding: 0 4rem;
+  }
 
+  section {
+    padding: 0 4rem;
+  }
 
-/*--------------------------------------------------------------
-# Sidebar
---------------------------------------------------------------*/
+  /* Banner */
+  .banner {
+    height: 300px;
+  }
 
-.sidebar {
-    margin: 0 8rem;
-    width: 70%;
-}
+  .banner h1 {
+    font-size: 2.5rem;
+  }
 
-.sticky-sidebar {
-    background-color: #fff;
-    padding: 1rem 1.25rem;
-    position: sticky;
-    top: 5.5rem;
-}
+  .banner-content {
+    padding: 4rem 0;
+  }
 
-.sidebar h4 {
-    font-size: 1.25rem;
-}
+  /* Banner btns */
+  .banner-btn-wrapper {
+    margin-top: 20px;
+  }
 
-/* Sidebar seperator */
-.sidebar hr {
-    margin-top: .5rem;
-    margin-bottom: 1rem;
-}
+  /* Hoe werkt het section */
+  .how-does-it-work {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+  }
 
-/* Sidebar links */
-.sidebar ul li {
-    margin-bottom: .75rem;
-}
-
-.sidebar ul li a {
-    transition: all 200ms;
-}
-
-.sidebar ul li a:hover {
-    color:#1e64e7;
+  .how-does-it-work ol {
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-left: 4rem;
+  }
 }
