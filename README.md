@@ -10,23 +10,46 @@ Dit project omvat een homepagina met detailpagina's voor de TestAssistent app.
   * [Installatie](#installatie)
   * [Gebruik](#gebruik)
   * [Bronnen](#bronnen)
-  * [Licentie](#licentie)x
+  * [Licentie](#licentie)
+  
+## ⚡ Kenmerken
+Dit project is gemaakt met HTML, CSS en JavaScript. Verder staat hieronder een korte lijst met gebruikte tools en middelen.
 
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+**Tools**
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+- 🖥️ Webstorm & Visual Studio Code
+- 🔥 Adobe XD
+- ✍ Pen & Papier
 
-## Installatie
+**Gebruikte technieken**
 
-## Gebruik
+- 📟 HTML
+- ⌚ CSS
+- 📲 JavaScript
 
-## Bronnen
+## 📥 Installatie
 
-## Licentie
+1. Clone of download deze respository.
+2. Ga naar de root directory van het project.
+3. Open het `index.html` bestand, hierdoor wordt de homepagina van de website geopend.
+
+## 🔨 Gebruik
+
+Op alle pagina's van de website is gebruik gemaakt van één globale navigatie aan de bovenkant van de pagina.<br> 
+Door deze te gebruiken kan je op een eenvoudige wijze naar alle pagina's van de website navigeren
+
+## 🔗 Handige links
+
+[Wiki](https://github.com/boudewijnbout/saml-zelftestapp-campaign-website-flow/wiki)
+
+## 📖 Bronnen
+[HTML5](https://www.w3schools.com/html/)
+<br>
+[CSS3](https://www.w3schools.com/css/)
+<br>
+[JavaScript](https://www.w3schools.com/js/)
+
+## 🔓 Licentie
 
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
