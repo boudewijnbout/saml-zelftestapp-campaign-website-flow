@@ -144,6 +144,30 @@ header {
   margin-right: 20px;
 }
 
+/* Create the line under nav item */
+.nav-menu-desktop ul li:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--main-color);
+  transition: all 300ms;
+  margin-top: .15rem;
+}
+
+.nav-menu-desktop ul li:hover:after {
+  width: 100%;
+}
+
+/* Seperator line after nav item */
+.nav-menu-desktop ul li:nth-child(5):after {
+  content: '';
+  background: #D2E2FF;
+  width: 1px;
+  height: 30px;
+  display: block;
+}
+
 /*--------------------------------------------------------------
 # Banner
 --------------------------------------------------------------*/
