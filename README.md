@@ -1,5 +1,5 @@
 # TestAssistent Flow & detail pagina's
-![Schermafbeelding Homepagina](assets/screenshot-homepage.png)
+![Schermafbeelding Homepagina](assets/images/screenshot-homepage.png)
 
 Dit project omvat een homepagina met detailpagina's voor de TestAssistent app.
 
