@@ -142,30 +142,44 @@ header {
 
 .nav-menu-desktop ul li {
   margin-right: 20px;
+  position: relative;
+  display: flex;
+}
+
+/* NL & EN vlag */
+.nav-menu-desktop ul li img {
+  margin-left: 10px;
 }
 
 /* Create the line under nav item */
-.nav-menu-desktop ul li:after {
+.nav-menu-desktop ul li:before {
   content: '';
   display: block;
   height: 2px;
   width: 0;
   background: var(--main-color);
   transition: all 300ms;
-  margin-top: .15rem;
+  position: absolute;
+  bottom: -3px;
 }
 
-.nav-menu-desktop ul li:hover:after {
+.nav-menu-desktop ul li:hover:before {
   width: 100%;
 }
 
 /* Seperator line after nav item */
+.nav-menu-desktop ul li:last-child {
+  position: relative;
+}
+
 .nav-menu-desktop ul li:nth-child(5):after {
   content: '';
   background: #D2E2FF;
   width: 1px;
-  height: 30px;
-  display: block;
+  height: 20px;
+  position: absolute;
+  right: -20px;
+  margin-right: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -415,10 +429,6 @@ footer ul li {
     grid-template-columns: 1fr 1fr;
   }
 
-  .nav-menu-desktop {
-    display: flex;
-  }
-
   /* Privacy Usage */
   .privacy-usage {
     grid-template-columns: 1fr 1fr;
@@ -462,6 +472,11 @@ footer ul li {
 
   section {
     padding: 0 4rem;
+  }
+
+  /* Desktop navigation */
+  .nav-menu-desktop {
+    display: flex;
   }
 
   /* Banner */
