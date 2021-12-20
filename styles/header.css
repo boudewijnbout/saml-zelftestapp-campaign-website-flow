@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header {
+    background: var(--bg-white);
+    height: 70px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+/* Logo Wrapper */
+.logo-wrapper img {
+    width: 200px;
+    height: auto;
+}
+
+/* Nav Menu Desktop */
+.nav-menu-desktop {
+    display: none;
+    margin-left: auto;
+}
+
+.nav-menu-desktop ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-menu-desktop ul li {
+    margin-right: 20px;
+    position: relative;
+    display: flex;
+}
+
+/* NL & EN vlag */
+.nav-menu-desktop ul li img {
+    margin-left: 10px;
+}
+
+/* Create the line under nav item */
+.nav-menu-desktop ul li:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--main-color);
+    transition: all 300ms;
+    position: absolute;
+    bottom: -3px;
+}
+
+.nav-menu-desktop ul li:hover:before {
+    width: 100%;
+}
+
+/* Seperator line after nav item */
+.nav-menu-desktop ul li:last-child {
+    position: relative;
+}
+
+.nav-menu-desktop ul li:nth-child(5):after {
+    content: '';
+    background: #D2E2FF;
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    right: -20px;
+    margin-right: 10px;
+}
+
+/*--------------------------------------------------------------
+# Media Query's Header
+--------------------------------------------------------------*/
+@media (min-width: 62.5rem) {
+    header {
+        padding: 0 4rem;
+    }
+
+    /* Desktop navigation */
+    .nav-menu-desktop {
+        display: flex;
+    }
+}

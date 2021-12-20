@@ -1,0 +1,326 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    font-weight: thin;
+    src: url("../assets/fonts/SF-Pro-Display-Thin.otf");
+}
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    font-weight: medium;
+    src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+}
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    font-weight: regular;
+    src: url("../assets/fonts/SF-Pro-Display-Regular.otf");
+}
+
+@font-face {
+    font-family: "SF-Pro-Display";
+    font-weight: bold;
+    src: url("../assets/fonts/SF-Pro-Display-Semibold.otf");
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+/* Variables */
+:root {
+    --main-color: #1e64e7;
+    --main-bg-color: #1e64e7;
+    --main-text-color: #444444;
+    --secondary-bg: #eff3fa;
+    --bg-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eff3fa;
+    color: var(--main-text-color);
+    font-family: "SF-Pro-Display", sans-serif;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--secondary-bg);
+    margin-top: 1rem;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+section {
+    padding: 0 1rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: all 200ms;
+}
+
+.btn img {
+    position: relative;
+    top: 2px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.seperator {
+    background: var(--main-bg-color);
+    width: 100px;
+    height: 3px;
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Banner
+--------------------------------------------------------------*/
+.banner {
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5)),
+    url("/assets/images/banner-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin-top: 70px;
+}
+
+/* Banner Content */
+.banner-content {
+    padding: 2rem 0;
+    position: relative;
+}
+
+/* Banner Title */
+.banner h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background: var(--main-bg-color);
+    display: inline-block;
+    padding: .5rem .5rem;
+    border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumb
+--------------------------------------------------------------*/
+.breadcrumb-wrapper {
+    background-color: #fff;
+    display: inline-block;
+    padding: .4rem .4rem;
+    font-size: .95rem;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+
+/*--------------------------------------------------------------
+# Basic Steps
+--------------------------------------------------------------*/
+.basic-steps {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Basic steps title */
+.basic-steps h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Basic steps paragraph */
+.basic-steps p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Basic steps card list */
+.basic-steps ol {
+    margin-top: 20px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+/* Basic Steps card item */
+.basic-steps ol li {
+    background-color: #fff;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 3px;
+}
+
+/* Card item image */
+.basic-steps-card img {
+    width: 34px;
+    height: auto;
+}
+
+/* Card item title */
+.basic-steps-card h3 {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Card item subtitle */
+.basic-steps-card h4 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Card item paragraph */
+.basic-steps-card p {
+    font-size: .9rem;
+    margin-top: 10px;
+    text-align: start;
+}
+
+/*--------------------------------------------------------------
+# Steps App
+--------------------------------------------------------------*/
+.steps-app {
+    margin-top: 50px;
+}
+
+.steps-app h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Steps app card wrapper */
+.steps-app-card-wrapper {
+    /*grid-template-columns: repeat(3, 1fr);*/
+    margin-top: 20px;
+    grid-gap: 15px;
+    display: grid;
+}
+
+/* Steps app card */
+.steps-app-card {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 3px;
+}
+
+/* Steps app card image */
+.steps-app-card img {
+    width: 200px;
+    height: auto;
+}
+
+/* Steps app card title */
+.steps-app-card h3 {
+    color: var(--main-color);
+    margin-top: 15px;
+    font-size: 1.25rem;
+}
+
+/* Steps app card subtitle */
+.steps-app-card h4 {
+    margin-top: 5px;
+}
+
+/*--------------------------------------------------------------
+# Media Query's
+--------------------------------------------------------------*/
+@media (min-width: 30rem) {
+    section {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 40rem) {
+    .basic-steps ol {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Steps app card wrapper */
+    .steps-app-card-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 62.5rem) {
+    section {
+        padding: 0 4rem;
+    }
+
+    /* Banner */
+    .banner {
+        height: 200px;
+    }
+
+    /* Banner Title */
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Banner Content */
+    .banner-content {
+        padding: 4rem 0;
+    }
+
+    /* Basic steps section */
+    .basic-steps {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 50px;
+    }
+
+    .basic-steps ol {
+        grid-column: 2 / 5;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        margin-left: 2rem;
+        margin-top: -80px;
+        z-index: 1;
+    }
+
+    /* Steps app card wrapper */
+    .steps-app-card-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

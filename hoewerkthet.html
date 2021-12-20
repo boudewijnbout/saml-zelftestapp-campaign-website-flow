@@ -4,12 +4,220 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SelfTest | StyleGuide</title>
+    <title>SelfTest | Hoe werkt het</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/hoewerkthet.css">
+    <link rel="stylesheet" href="styles/hoewerkthet.css"/>
+    <link rel="stylesheet" href="styles/header.css"/>
+    <link rel="stylesheet" href="styles/footer.css"/>
 </head>
 <body>
-    <h1>Hoe werkt het?</h1>
+
+<!-- Header -->
+<header>
+
+    <!-- Logo -->
+    <div class="logo-wrapper">
+        <a href="index.html">
+            <img src="assets/images/logo.png" alt="Logo"/>
+        </a>
+    </div>
+
+    <!-- Nav menu -->
+    <nav class="nav-menu-desktop">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="hoewerkthet.html">Hoe werkt het?</a>
+            </li>
+            <li>
+                <a href="">Privacy</a>
+            </li>
+            <li>
+                <a href="">Functies</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">NL</a>
+                <img src="assets/icons/nl-vlag.svg">
+            </li>
+            <li>
+                <a href="">EN</a>
+                <img src="assets/icons/en-vlag.svg">
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main content -->
+<main>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Hoe werkt het?</h1>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb-wrapper">
+            <p><a href="index.html">Home</a> > Hoe werkt het?</p>
+        </div>
+    </section>
+
+    <!-- Basic steps section -->
+    <section class="basic-steps">
+        <div>
+
+            <!-- Basic steps title -->
+            <h2>De basis stappen</h2>
+            <span class="seperator"></span>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id
+                metus et nisi viverra semper. Sed gravida ipsum augue, vel tempus
+                dui venenatis et. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Nullam id metus et nisi viverra semper. Sed gravida ipsum
+                augue, vel tempus dui venenatis et.
+            </p>
+        </div>
+
+        <!-- Basic steps cards -->
+        <ol>
+
+            <!-- Step 1 -->
+            <li class="basic-steps-card">
+                <img
+                        src="assets/icons/send-icon.svg"
+                        alt="Papieren vliegtuig icoon"
+                />
+                <h3>Stap 1</h3>
+                <h4>Dien je klachten in</h4>
+                <p>
+                    Als eerste selecteer je in de App welke symptomen van Covid jij
+                    ervaart en of jij in aanraking bent gekomen met iemand die
+                    positief is getest.
+                </p>
+            </li>
+
+            <!-- Step 2 -->
+            <li class="basic-steps-card">
+                <img src="assets/icons/qr-icon.svg" alt="Qr code icoon"/>
+                <h3>Stap 2</h3>
+                <h4>Scan de barcode van uw zelf-test</h4>
+                <p>
+                    Vervolgens scan je de barcode van uw zelf-test om te beginnen. Na
+                    het scannen doorloop je het stappenplan van de zelftest. Bij
+                    iedere stap staan uitgebreide instructies die je ook kunt
+                    beluisteren.
+                </p>
+            </li>
+
+            <!-- Step 3 -->
+            <li class="basic-steps-card">
+                <img src="assets/icons/clock-icon.svg" alt="Klok icoon"/>
+                <h3>Stap 3</h3>
+                <h4>Wacht 15 minuten</h4>
+                <p>
+                    Als eerste selecteer je in de App welke symptomen van Covid jij
+                    ervaart en of jij in aanraking bent gekomen met iemand die
+                    positief is getest.
+                </p>
+            </li>
+
+            <!-- Step 4 -->
+            <li class="basic-steps-card">
+                <img src="assets/icons/mail-icon.svg" alt="Mail icoon"/>
+                <h3>Stap 4</h3>
+                <h4>Ontvang het resultaat</h4>
+                <p>
+                    Na het doorlopen van uw zelf-test krijg je de uitslag en weet je
+                    of je positief of negatief bent. Vervolgens krijg je aanvullende
+                    informatie waarin staat wat u moet doen bij een positieve of
+                    negatieve uitslag.
+                </p>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Steps App Section -->
+    <section class="steps-app">
+
+        <!-- Steps app title -->
+        <div>
+            <h2>De stappen in de app</h2>
+            <span class="seperator"></span>
+        </div>
+
+        <!-- Steps app card wrapper -->
+        <div class="steps-app-card-wrapper">
+
+            <!-- Steps card 1 -->
+            <div class="steps-app-card">
+                <img src="assets/images/stap-1.jpeg" alt="Step 1 Image">
+                <h3>Stap 1</h3>
+                <h4>Dien je klachten in</h4>
+            </div>
+
+            <!-- Steps card 2 -->
+            <div class="steps-app-card">
+                <img src="assets/images/stap-2.jpeg" alt="Step 2 Image">
+                <h3>Stap 2</h3>
+                <h4>Scan de barcode van uw zelf-test</h4>
+            </div>
+
+            <!-- Steps card 3 -->
+            <div class="steps-app-card">
+                <img src="assets/images/stap-3.jpeg" alt="Step 3 Image">
+                <h3>Stap 3</h3>
+                <h4>Ontvang het resultaat</h4>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+
+    <!-- Footer logo -->
+    <img src="assets/images/logo.png" alt="Logo TestAssistent">
+
+    <!-- Footer nav menu pagination -->
+    <div>
+        <h4>Menu</h4>
+        <span class="seperator"></span>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Onze app</a>
+            </li>
+            <li>
+                <a href="#">Functies</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer nav nenu socials -->
+    <div>
+        <h4>Socials</h4>
+        <span class="seperator"></span>
+        <ul>
+            <li>
+                <a href="#">Instagram</a>
+            </li>
+            <li>
+                <a href="#">Facebook</a>
+            </li>
+            <li>
+                <a href="#">Linkedin</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
 </body>
 </html>
