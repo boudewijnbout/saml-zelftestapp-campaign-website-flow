@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-
 header {
     background: var(--bg-white);
     height: 70px;
@@ -23,25 +22,58 @@ header {
 
 /* Nav Menu Desktop */
 .nav-menu-desktop {
-    display: none;
     margin-left: auto;
+    background: #EFF3FA;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    right: -100%;
+    left: 0;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.nav-menu-desktop.active {
+    right: 0;
 }
 
 .nav-menu-desktop ul {
+    padding: 2rem 2rem;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 }
 
 .nav-menu-desktop ul li {
     margin-right: 20px;
+    margin-bottom: 30px;
     position: relative;
     display: flex;
 }
 
 /* NL & EN vlag */
-.nav-menu-desktop ul li img {
+.nav-menu-language {
+    display: flex;
+    position: relative;
+}
+
+/* Nav language flag */
+.nav-menu-language img {
     margin-left: 10px;
+}
+
+/* Nav language link */
+.nav-menu-language li {
+    margin-top: 1.25rem;
+}
+
+/* Nav language seperator line */
+.nav-menu-language:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #D2E2FF;
+    position: absolute;
 }
 
 /* Create the line under nav item */
@@ -65,14 +97,35 @@ header {
     position: relative;
 }
 
-.nav-menu-desktop ul li:nth-child(5):after {
-    content: '';
-    background: #D2E2FF;
-    width: 1px;
-    height: 20px;
-    position: absolute;
-    right: -20px;
+/* Hamburger Icon */
+.hamburger {
+    cursor: pointer;
+    transition: .3s;
+    margin-left: auto;
     margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* Hamburger bars */
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: var(--main-color);
+    display: block;
+    margin: 5px auto;
+}
+
+/* Hamburger active state */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
 }
 
 /*--------------------------------------------------------------
@@ -83,8 +136,52 @@ header {
         padding: 0 4rem;
     }
 
+    .hamburger {
+        display: none;
+    }
+
     /* Desktop navigation */
     .nav-menu-desktop {
+        margin-left: auto;
         display: flex;
+        top: 0;
+        width: auto;
+        right: 0;
+        transition: none;
+        position: relative;
+        background: none;
+    }
+
+    .nav-menu-desktop ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-menu-desktop ul li {
+        margin-bottom: 0;
+        margin-right: 20px;
+        position: relative;
+        display: flex;
+    }
+
+    .nav-menu-desktop ul li:nth-child(5):after {
+        content: '';
+        background: #D2E2FF;
+        width: 1px;
+        height: 20px;
+        position: absolute;
+        right: -20px;
+        margin-right: 10px;
+    }
+
+    /* Nav menu language */
+    .nav-menu-language li {
+        margin-top: 0;
+    }
+
+    .nav-menu-language:before {
+        display: none;
     }
 }

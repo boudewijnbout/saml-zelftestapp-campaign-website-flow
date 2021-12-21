@@ -183,8 +183,6 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 15px;
-  margin-top: -80px;
-  z-index: 1;
 }
 
 /* How does it work card item */
@@ -193,24 +191,29 @@ section {
   padding: 1rem 1.2rem;
   text-align: center;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 3px;
 }
 
+/* Card item image*/
 .how-does-it-work-card img {
   width: 34px;
   height: auto;
 }
 
+/* Card item title */
 .how-does-it-work-card h3 {
   color: var(--main-color);
   text-align: center;
   font-size: 1.25rem;
 }
 
+/* Card item subtitle */
 .how-does-it-work-card h4 {
   text-align: center;
   margin-top: 5px;
 }
 
+/* Card item paragraph */
 .how-does-it-work-card p {
   font-size: .9rem;
   margin-top: 10px;
@@ -220,7 +223,6 @@ section {
 /*--------------------------------------------------------------
 # Privacy Usage Section
 --------------------------------------------------------------*/
-
 .privacy-usage {
   margin-top: 15px;
   display: grid;
@@ -369,7 +371,7 @@ section {
 
   /* Hoe werkt het section */
   .how-does-it-work {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
   }
 
@@ -377,8 +379,10 @@ section {
     grid-column: 2 / 5;
     display: grid;  
     grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    margin-left: 4rem;
+    grid-gap: 15px;
+    margin-left: 2rem;
+    margin-top: -80px;
+    z-index: 1;
   }
   
   /* Privacy usage */
